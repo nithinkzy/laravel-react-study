@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, Link, createBrowserRouter } from "react-router-dom";
 
 import SignUp from "./views/signup";
 import Login from "./views/login";
@@ -17,11 +17,11 @@ const router = createBrowserRouter([
                 element: <Navigate to="/users" />,
             },
             {
-                path: "./users",
+                path: "/users",
                 element: <Users />,
             },
             {
-                path: "./dashboard",
+                path: "/dashboard",
                 element: <Dashboard />,
             },
         ],
@@ -31,11 +31,11 @@ const router = createBrowserRouter([
         element: <GuestLayout />,
         children: [
             {
-                path: "./login",
+                path: "/login",
                 element: <Login />,
             },
             {
-                path: "./signup",
+                path: "/signup",
                 element: <SignUp />,
             },
         ],
